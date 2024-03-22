@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.JavaScript Program To Print Hello World
+        console.log('Hello World');
+        // JavaScript Program to Add Two Numbers
+        var addOne = 100;
+        var addTwo = 200;
+        var sum = addOne + addTwo;
+        console.log(sum);
+        // 2.JavaScript Program to Find the Square Root
+        function squareRoot(root) {
+            return Math.sqrt(root)
+        }
+        var root = 16;
+        var squareRoot = squareRoot(root);
+        console.log(`The Square Root of ${root} is : ${squareRoot}`);
+        // 3.JavaScript Program to Calculate the Area of a Triangle
+        function areaOfTriangle(base, height) {
+            const area = base * height * 0.2
+            return area
+        }
+        var base = 100;
+        var height = 200;
+        var area = areaOfTriangle(base, height);
+        console.log(`The Area of the triangle ${base} and ${height} is : ${area}`);
+        // 4.JavaScript Program to Swap Two Variables
+        var swapOne = 100;
+        var swapTwo = 200;
+        var temp;
+        console.log(`print before Swapping swapOne=${swapOne}`);
+        console.log(`print before Swapping swapTwo=${swapTwo}`);
+        swapOne = temp; // 100 = temp;
+        swapOne = swapTwo; //   a=200; 
+        temp = swapTwo; //a= 100;
+        console.log(`print After Swapping swapOne=${swapOne}`);
+        console.log(`print After Swapping swapOne=${swapTwo}`);
+        // 5.Javascript Program to Check if a number is Positive, Negative, or Zero
+        // const number = parseInt(prompt('Enter a Number'))
+        // if (number>0){
+        //     console.log('The Number is Positive');
+        // }else if(number == 0){
+        //     console.log('The Number is Equal to 0');
+        // }else{
+        //     console.log('The Number is Negative');
+        // }
+        //6.Javascript Program to Check if a Number is Odd or Even
+        function oddEven(checkNum) {
+            if (checkNum % 2 === 0) {
+                return "even number"
+            } else {
+                return "odd number"
+            }
+        }
+        console.log(oddEven(11));
+        //7.JavaScript Program to Check Prime Number
+        function primeNumber(checkPrime) {
+            if (checkPrime <= 1) {
+                return false;
+            }
+            for (let i = 2; i > checkPrime; i++) {
+                if (checkPrime % 2 === 0) {
+                    return false
+                }
+            }
+            return true;
+        }
+        primeNumber(19) ? console.log('prime number ') : console.log('not a prime number');
+        // 8.JavaScript Program to Find the Factorial of a Number
+        function factorial(factorialNum) {
+            if (factorialNum === 0 || factorialNum === 1) {
+                return 1;
+            } else {
+                return factorialNum * factorial(factorialNum - 1)
+            }
+        }
+        var factorialNum = 4;
+        var factorialFinal = factorial(factorialNum);
+        console.log(`The Factorial ${factorialNum} is : ${factorialFinal}`);
+        // 9.JavaScript Program to Display the Multiplication Table
+        //100 * 1 = 100
+        function tableFunction() {
+            const table = 100;
+            for (let k = 1; k <= 10; k++) {
+                const MulTable = table * k;
+                console.log(`${table} * ${k} = ${MulTable}`);
+            }
+        }
+        tableFunction();
+        // 10.JavaScript Program to Reverse a String
+        let text = "Reverse";
+        function functionReverse() {
+            let text1 = text.toString("").split("").reverse("")
+            console.log(text1);
+        }
+        functionReverse()
+        // 11.JavaScript Program to Display the Palindrome text
+        let pal = "MADAM";
+        const functionPal = () => {
+            let pal1 = pal.toString("").split("").reverse("").join("");
+            if (pal1 === pal) {
+                console.log('palindrome');
+            } else {
+                console.log('not a palindrome');
+            }
+        }
+        functionPal();
+        // 12 JavaScript Program to Convert Kilometers to Miles
+        //  1km = 0.621371(mi) miles
+        function convertKmToMi() {
+            const miles = kilometer * 0.621371;
+            return miles
+        }
+        let kilometer = 3;
+        let covMiles = convertKmToMi();
+        console.log(`The ${kilometer} kilometer is equal to ${covMiles}`);
+        // 13 Javascript Program to Generate a Random Number
+        var randomNum = Math.random()
+        console.log(randomNum);
+        // 14 JavaScript Program to Find Sum of Natural Numbers Using Recursion
+    </script>
+</body>
+
+</html>
