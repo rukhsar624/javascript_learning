@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Palindrome Function Open
+        let checkPalindrome = "MADAM";
+        const functionCheck = () => {
+            let checkPalindromeText = checkPalindrome.toString("").split("").reverse("").join("");
+            if (checkPalindromeText == checkPalindrome) {
+                console.log("palindrome");
+            } else {
+                console.log("not a palindrome");
+            }
+        }
+        functionCheck();
+        // Palindrome Function Closed
+        // Primary Number Check Open
+        // function checkPrimaryNum(num) {
+        //     if (num <= 1)
+        //         return false;
+        //     for (let i = 2; i < num; i++)
+        //         if (num % i == 0) {
+        //             return false
+        //         }
+        //     return true
+        // }
+        // checkPrimaryNum(12) ? console.log("primary Number") : console.log("not a primary Number");
+        // Primary Number Check Closed
+        // Even Number Check Open 
+        function EvenNumber(numEven) {
+            return numEven % 2 === 0
+        }
+        const checkEvenNumber = 11;
+        EvenNumber(checkEvenNumber) ? console.log(`${checkEvenNumber} is an even Number`) :
+            console.log(`${checkEvenNumber} is  an odd Number `);
+        // Even Number Check Closed
+        // table of 5 open
+        let n = 5;
+        for (i = 1; i <= 10; i++)
+            console.log(n + "*" + i + "=" + n * i);
+        // table of 5 closed
+        // Write a JavaScript program to find the area of a triangle where three sides are 5, 6, 7 Open
+        var sideOne = 5;
+        var sideTWo = 6;
+        var sideThree = 7;
+        var s = (sideOne + sideTWo + sideThree) / 2;
+        var area = Math.sqrt(s * (s - sideOne) * (s - sideTWo) * (s - sideThree))
+        console.log(area);
+        // 
+        // Write a Program to find the area of the circle 
+        var pi = 3.142857142857143;
+        var r = 10;
+        var areaCircle = (3.142857142857143) * (10 * 10);
+        console.log(areaCircle);
+        // 
+        // Create an array with the name "rukhsar anwar"
+        const nameArray = ['rukhsar', 'anwar'];
+
+        // Reverse the array 
+        const reversedArray = nameArray.slice().reverse("").join(" ");
+
+        // Display the original and reversed arrays
+        console.log('Original Array:', nameArray);
+        console.log('Reversed Array:', reversedArray);
+
+
+        // Palindrome Check 
+        let palindromeText = 'madam';
+        const funtionOfpalindrome = () => {
+            let textCheck = palindromeText.toString("").split("").reverse("").join("");
+            if (textCheck == palindromeText) {
+                console.log('madam is palindrome');
+            } else {
+                console.log('madam is not palindrome');
+            }
+        }
+        funtionOfpalindrome();
+        // 
+        function checkPrimaryNum(num) {
+            if (num <= 1)
+                return false;
+            for (let i = 2; i < num; i++)
+                if (num % i == 0) {
+                    return false
+                }
+            return true
+        }
+        checkPrimaryNum(12) ? console.log("primary Number") : console.log("not a primary Number");
+
+
+        // primary Number Check in javascript
+        function primeNum(num) {
+            if (num <= 1)
+                return false;
+            for (let i = 2; i < num; i++)
+                if (num % i == 0) {
+                    return false
+                }
+            return true
+        }
+        primeNum(11) ? console.log('11 primary Number') : console.log('11 not a primary Number');
+
+
+        // palindrome
+        let pal ="anna"
+        const functionpal=()=>{
+            let pal1=pal.split("").reverse("").join("");
+            if(pal1==pal){
+                console.log("anna is palindrome");
+            }else{
+                console.log("anna is not a palindrome");
+            }
+        }
+        functionpal();
+
+        // prime number
+
+        function primeNum(primaryNum){
+            if(primaryNum<=1)
+            return false;
+            for(let i=2;i<primaryNum;i++);
+        if(primaryNum % i ==0){
+            return false
+        }
+        return true
+        }
+        primeNum(90) ? console.log('90 is a prime number') : console.log('90 is not a Prime Number');
+    </script>
+</body>
+
+</html>

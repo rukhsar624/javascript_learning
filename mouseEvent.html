@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse-Event</title>
+</head>
+<style>
+    #demo4 {
+        height: 100px;
+        width: 100px;
+        background-color: aqua;
+    }
+</style>
+
+<body>
+
+    <!-- onClick -->
+    <button onclick="onclickFun()">onClick</button>
+    <p id="demo"></p>
+    <!-- ondbclick -->
+    <button ondblclick="ondblclickFun()">ondblClick</button>
+    <p id="demo1"></p>
+    <!-- onmousedown -->
+    <p id="demo2" onmousedown="onmouseDown()">hello</p>
+    <!-- onmouseUp -->
+    <p id="demo3" onmouseup="onmouseUp()">hello 2</p>
+    <!-- onmouseenter -->
+    <div id="demo4" onmouseenter="onmouseEnter()" onmouseleave="onmouseLeave()"></div>
+    <p id="number"></p>
+    <p id="cars"></p>
+    <p id="cars1"></p>
+    <p id="loop"></p>
+    <p id="elem"></p>
+    <script>
+        // onclick
+        function onclickFun() {
+            document.getElementById('demo').innerHTML = "Show Hello"
+        }
+        // ondblclick
+        function ondblclickFun() {
+            document.getElementById('demo1').innerHTML += "Show Hello on Double Click"
+            console.log(demo1);
+        }
+        // onMousedown
+        function onmouseDown() {
+            document.getElementById('demo2').style.color = "red";
+        }
+        // onMouseup
+        function onmouseUp() {
+            document.getElementById('demo3').style.color = "green";
+        }
+        // onMouseEnter
+        function onmouseEnter() {
+            document.getElementById('demo4').style.backgroundColor = "red";
+        }
+        // onmouseLeave
+        function onmouseLeave() {
+            document.getElementById('demo4').style.backgroundColor = "green"
+        }
+        //    For Loop
+        let carsName = ["Volvo", "Tesla", "Audi", "BMW", "Ford"];
+        let text = "";
+        for (let i = 0; i < carsName.length; i++) {
+            text += carsName[i] + "<br>";
+        }
+        document.getElementById('cars').innerHTML = text;
+        // While
+        let secondText="";
+        let carName=["Volvo", "Tesla", "Audi", "BMW", "Ford" , "other"];
+        while(carName > carName.length){
+            secondText+='<br> the cars is ' + carName;
+            carName++;
+        }
+        document.getElementById('loop').innerHTML=secondText;
+        console.log(carName);
+        // hoisted
+        var x ;  //declare
+        x=10 ;  // assign
+        elem=document.getElementById('elem');
+        elem.innerHTML=x;
+    </script>
+  
+</body>
+
+</html>

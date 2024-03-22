@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript-Learning</title>
+    <!-- ==============css file=========== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <p>The length of the string is:</p>
+    <p id="demo"></p>
+    <h6 id="demo1"></h6>
+    <h6 id="demo2"></h6>
+    <h6 id="demo3"></h6>
+    <h6 id="demo7"></h6>
+    <p id="find"></p>
+    <p id="find1"></p>
+    <h5 id="demo11"></h5>
+    <h5 id="demo123"></h5>
+    <p id="length"></p>
+    <span id="push"></span><br>
+    <span id="push1"></span><br>
+    <span id="push11"></span><br>
+    <p id="sort"></p>
+    <p id="demo12344"></p>
+    <h1 onmouseover="style.color='red'" onmouseout="style.color='yellow'">hello</h1>
+    <p id="plusNumber"></p>
+    <p id="newDishName"></p>
+    <p id="car"></p>
+    <p id="demo31"></p>
+    <p id="demo90"></p>
+    <p id="text"></p>
+    <p id="demo901"></p>
+    <p id="demo90000"></p>
+    <p id="demo0"></p>
+    <input type="" placeholder="Enter Word" function="getvalue()">
+    <!-- Filter Method() -->
+    <p id="agesCheck"></p>
+    <!-- Find Method() -->
+    <p id="agesCheck1"></p>
+    <!-- Map Method() -->
+    <p id="newNumber"></p>
+    <!-- Second Map Method -->
+    <p id="newNumber1"></p>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script>
+        // filter Method()
+        const ages = [12, 34, 67, 11, 9];
+        document.getElementById('agesCheck').innerHTML = ages.filter(checkAdult)
+        function checkAdult(ages) {
+            return ages >= 18;
+        }
+        // Find Method()
+        const ages1 = [12, 13, 56, 90, 87, 65, 54, 45];
+        document.getElementById('agesCheck1').innerHTML = ages1.find(checkAdult1)
+        function checkAdult1(ages1) {
+            return ages1 >= 18
+        }
+        // Map Method()
+        const number =[1,2,3,4,5];
+        const newNumber =number.map(multiply);
+        document.getElementById('newNumber').innerHTML=newNumber.map(multiply)
+        function multiply (num){
+            return num * 10;
+            console.log(multiply);
+        } 
+        // Second Map Method() 
+        const num =[11,22,33];
+        const newNum = num.map(greaterThen);
+        document.getElementById('newNumber1').innerHTML=newNum.map(greaterThen)
+        function greaterThen (num1){
+            return num1*10;
+        }
+    </script>
+</body>
+
+</html>

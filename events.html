@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js | Events</title>
+    <!-- ==============css file=========== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- <h1>Browser Events</h1>
+    <p>Click</p>
+    <p>contextmenu</p>
+    <p>mouseover/mouseout</p>
+    <p>mousedown/mouseup</p>
+    <p>mousemove</p>
+    <p>submit</p>
+    <p>focus</p>
+    <p>Dom content loaded</p>
+    <p>transitionend</p> -->
+    <button onclick="onclickfun()">onclick</button>
+    <p id="show"></p>
+    <div class="container">
+        <p id="demop"></p>
+        <h1>This is my Heading</h1>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti esse aut voluptatem natus cum
+            suscipit,
+            facilis eum veniam voluptatibus distinctio totam molestias repellat tempora sequi dignissimos et, neque
+            ipsa! Dolorum tempore, rem accusantium placeat sed eligendi, at eveniet, vel iusto vitae deserunt nemo. Nisi
+            voluptatibus molestias dolorum at rem, fugiat nam autem repellat ratione unde, explicabo recusandae itaque
+            voluptatum quis suscipit illo magnam. Rerum corrupti saepe, quam voluptatibus voluptatem, aperiam
+            praesentium doloribus consectetur unde, vel adipisci sit animi eos voluptas quia nesciunt eaque ipsum
+            molestias facilis quisquam? Assumenda, expedita dicta consectetur numquam ipsum adipisci dignissimos
+            nesciunt culpa pariatur id dolorem enim suscipit eos velit possimus tenetur voluptatem aliquid iure corporis
+            amet asperiores similique error. Eveniet sunt itaque accusantium vel assumenda? Deserunt architecto qui
+            quaerat beatae reiciendis, ullam tenetur commodi sequi autem laboriosam consequuntur iste a earum vel
+            pariatur tempora. Error maiores, laudantium quas nisi iure numquam excepturi mollitia repudiandae?
+            Laboriosam nam consequuntur cum ea perferendis dolores officia ducimus error neque, inventore quaerat quos
+            voluptas modi provident, ipsum, quam distinctio totam optio eos fugit nostrum architecto? Eligendi ipsum
+            quae at deserunt ducimus optio numquam ea, eos ut aperiam ipsa dolore, labore nesciunt distinctio quas
+            tempora, repellendus tenetur commodi vitae doloremque! Ullam animi tenetur architecto quis placeat veniam
+            quisquam ipsa. Nulla similique placeat culpa praesentium, eum labore nemo minima eligendi, delectus modi
+            sequi quaerat ea repellendus reiciendis obcaecati eius, incidunt autem quasi.'</p>
+        <button id="btn" class="btn-success" onclick="toggleHide()">Show/Hide</button>
+        <!-- <input type="number" id="text">    s -->
+    </div>
+    <!-- <form>
+            <input type="text" value="text" id="abc" onfunction="myfunction()" >
+          </form> -->
+    <form>
+        <input type="text" placeholder="Enter Text" function="myFunction()">
+    </form>
+    <div>
+        <p>Palindrome in JavaScript</p>
+    </div>
+    <input type="text" placeholder="Enter text" onblur="getVal()" class="text-danger">
+    <script>
+        // "use strict"
+        function getVal() {
+            const val = document.querySelector('input').value;
+            console.log(val);
+        }
+        function toggleHide() {
+            let btn = document.getElementById('btn');
+            let para = document.getElementById('para')
+            if (para.style.display != 'none') {
+                para.style.display = 'none';
+            } else {
+                para.style.display = 'block'
+            }
+        }
+        // console.log(document.getElementById('text').value);
+        // function getVal() {
+        //   const val = document.querySelector('input').value;
+        //   console.log(val);
+        // }
+        // Palindrome in JavaScript
+        // function to check palindrome
+        let Palindrome = 'Maham';
+        let checkPalindrome = Palindrome.split('Maham').reverse('Maham').join('Maham');
+        if (Palindrome == checkPalindrome) {
+            console.log("The given string is Palindrome");
+        }
+        else {
+            console.log("The given string is not a Palindrome");
+        }
+        // Split in javasrcipt
+        var textName = "My name is Rukhsar Anwar"
+        var Name = textName.split('');
+        console.log(Name);
+        // Palindrome in JavaScript
+        let name = 'Madam'
+        let checkname = name.split().reverse().join();
+        console.log(checkname);
+        console.log(name == checkname ? 'this is palindrome' : 'this is not a palindrome');
+        // function myfunction() {
+        //     let val = document.getElementById("Idkey").value;
+        //     console.log(val);
+        //   }
+        // function myfunction() {
+        //     var val = document.getElementById("abc").value;
+        //     console.log(val);
+        // }
+        // Palindrome 
+        var personName = 'madam'
+        var checkpersonName = personName.split("").reverse("").join("");
+        console.log(checkpersonName);
+        if (checkpersonName == personName) {
+            console.log('Its Palindrom');
+
+        } else {
+            console.log('Its not a Palindrome');
+
+        }
+        let text = 'split'
+        console.log(text.split(""));
+        let array = ['one', 'two', 'three', 'four', 'five'];
+        let newarray = array.toString();
+        console.log(newarray);
+        // print input value 
+        // function myFunction() {
+        //     const val = document.querySelector('input').value;
+        //     console.log(val);
+        // }
+        function sum(a, b) {
+            var adds = a + b;
+            console.log("add number");
+        }
+        sum(10, 12);
+        // Higher Order Function In JavaScript
+        // const questioinPaper=(name)=>{
+        //     if(name === 'Rukhsar'){
+        //         return function (topic){
+        //             console.log(`HI! ${name} . What is ${topic} .? Please explain it.`);
+        //         }
+        //     }
+        //     if(name === 'Anwar'){
+        //         return function (topic){
+        //             console.log(`HI! ${name} . What is ${topic} .? Please explain it.`);
+        //         }
+        //     }
+        //     if(name === 'Maham'){
+        //         return function (topic){
+        //             console.log(`HI! ${name} . What is ${topic} .? Please explain it.`);
+        //         }
+        //     }
+        //     else{
+        //         return function(){
+        //             console.log("welcome to exam");
+        //         }
+        //     }
+        // }
+        // questioinPaper('Rukhsar')('DMARKS RULE');
+        // questioinPaper('Anwar')('DMARKS RULE');
+        // questioinPaper('Maham')('DMARKS RULE');
+        const interviewquestion = (name) => {
+            if (name === "Rukhsar") {
+                return function (topic) {
+                    console.log(`HI! ${name}. here is your topic ${topic} .? Please explain it.`);
+                }
+            }
+            if (name === "Hasnain") {
+                return function (topic) {
+                    console.log(`HI! ${name}. here is your topic ${topic} .? Please explain it.`);
+                }
+            }
+            if (name === "Maham") {
+                return function (topic) {
+                    console.log(`HI! ${name}. here is your topic ${topic} .? Please explain it.`);
+                }
+            } else {
+                return function () {
+                    console.log("welcome to Interview Questions");
+                }
+            }
+        }
+        interviewquestion("Rukhsar")("Front End Developer");
+        interviewquestion("Hasnain")("Full Stack Developer");
+        interviewquestion("Maham")("Graphics Designer");
+        //   call() Method
+        const youtuber = {
+            name: "Anwar",
+            content: "Programming-Learning",
+            feature: function (rating) {
+                console.log(`very friendly way to teaching ${this.name} is my fav ${this.content} channel . I will love to give ${rating} star`);
+            }
+        }
+        const secondYoutuber = {
+            name: "Ali",
+            content: "Programming-Learning",
+        }
+        youtuber.feature.call(secondYoutuber, 5)
+        // apply() Method
+        const youtuber11 = {
+            name: "Anwar",
+            content: "Programming-Learning",
+            feature: function (rating) {
+                console.log(`very friendly way to teaching ${this.name} is my fav ${this.content} channel . I will love to give ${rating} star`);
+            }
+        }
+        // youtuber.feature(5)
+        const secondYoutuber1 = {
+            name: "Alam",
+            content: "Programming-Learning",
+        }
+        youtuber11.feature.apply(secondYoutuber1, [5])
+        // Bind() Method
+        const youtuber1 = {
+            name: "Smith",
+            context: "Programer",
+            age: "30",
+        }
+        const youtuber2 = {
+            name: "John",
+            context: "Full Stack Developer",
+            age: "34",
+        }
+        const youtuber3 = {
+            name: "Emma",
+            context: "Designer",
+            age: "55",
+        }
+        function feature() {
+            console.log(`My Fav youtuber name is ${this.name} .He made vedio on ${this.context}`);
+        }
+        let youtu1 = feature.bind(youtuber1);
+        youtu1()
+        //  Function Scope
+       function myFunction() {
+        var carName= "Tasla";
+       }
+    //    Global JS Variables
+    let carName ="volvo"
+    MyFunction();
+    function MyFunction(){
+        document.getElementById("demop").innerHTML="i can display"  + carName;
+    }
+    // mouse Events 
+function onclickfun(){
+document.getElementById('show').innerHTML="hello";
+console.log('show');
+}
+// Promise
+const newPromise =new Promise((resolve,reject) =>{
+    const a = 5, b=10;
+    const c =a+b;
+    if(c ===16){
+        resolve(`yes! the ${a} + ${b} = c`)
+    }else{
+        reject(`yes! the ${a} + ${b} = c`)
+    }
+})
+newPromise.then((m)=>{
+console.log(m);
+}).catch((error)=>{
+console.log(error);
+})
+let ans = 6 / "3";
+document.write( typeof ans );
+console.log(typeof(ans));
+// const str1='Geeksfor' 
+// const str2='Geeks' 
+// const str3=str1.concat(str2) 
+// console.log(str3)
+
+const str1='GeeksforGeeks' 
+const str2=str1.slice(2,5) 
+console.log(str2)
+
+
+const arr=[1,2,3,4,5,6] 
+console.log(arr.pop());
+
+
+const arr1=[1,2,3,4,5,6] 
+console.log(arr1.slice(1,3))
+   </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
